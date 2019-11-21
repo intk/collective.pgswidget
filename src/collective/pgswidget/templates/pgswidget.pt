@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone"
+      tal:omit-tag="">
+<body tal:omit-tag="">
+
+	<tal:def tal:define="icin view/get_icin;
+						 api_key view/get_key;
+						 widget_url view/get_widget_url">
+
+		<tal:renderwidget tal:condition="python: icin and api_key and widget_url">
+
+			<h3>Reacties</h3>
+
+			<script type="text/javascript" tal:attributes="src widget_url"></script>
+			<div class="tf-widget" 
+				data-icin="" 
+				data-pgs-key="" 
+				data-show-reactions="1" 
+				data-allow-reactions="1" 
+				data-show-reviews="1" 
+				data-author-fields='{}' 
+				data-collapsed="0"
+
+				tal:attributes="data-icin icin;
+								data-pgs-key api_key">
+			</div>
+
+		</tal:renderwidget>
+	</tal:def>
+</body>
+</html>

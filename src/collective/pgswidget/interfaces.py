@@ -8,8 +8,11 @@ from zope.interface import provider
 from plone.autoform.interfaces import IFormFieldProvider
 from zope.interface import implementer
 from zope.component import adapter
+from zope.interface import Interface
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
-
-
+class IBrowserLayer(IDefaultBrowserLayer):
+    """collective.pgswidget specific browser layer.
+    """
     
 

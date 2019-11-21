@@ -27,4 +27,20 @@
     title="PGSwidget user reviews behavior"
     />
 
+  <browser:page
+    for="collective.pgswidget.behavior.IPGSwidget"
+    name="pgswidget"
+    class=".views.PGSwidgetView"
+    template="templates/pgswidget.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+      name="pgswidget-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.PGSWidgetControlPanelView"
+      permission="cmf.ManagePortal"
+  />
+
+
 </configure>
