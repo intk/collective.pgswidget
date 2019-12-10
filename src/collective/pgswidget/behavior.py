@@ -24,7 +24,6 @@ from plone.autoform import directives
 from plone.app.z3cform.widget import AjaxSelectFieldWidget
 
 
-
 @provider(IFormFieldProvider)
 class IPGSwidget(model.Schema):
     """Interface for PGSwidget behavior."""

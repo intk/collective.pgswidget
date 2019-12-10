@@ -1,0 +1,6 @@
+<div id="reactions"
+	tal:define="reactions view/get_reviews">
+	<tal:reviews tal:condition="reactions">
+		<tal:reviewslist tal:replace="structure reactions"></tal:reviewslist>
+	</tal:reviews>
+</div>

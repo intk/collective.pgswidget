@@ -29,6 +29,14 @@
 
   <browser:page
     for="collective.pgswidget.behavior.IPGSwidget"
+    name="pgsreview"
+    class=".views.PGSreviewView"
+    template="templates/pgsreview.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="collective.pgswidget.behavior.IPGSwidget"
     name="pgswidget"
     class=".views.PGSwidgetView"
     template="templates/pgswidget.pt"
@@ -40,6 +48,12 @@
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".controlpanel.PGSWidgetControlPanelView"
       permission="cmf.ManagePortal"
+  />
+
+  <plone:static
+    directory="resources"
+    type="plone"
+    name="collective.pgswidget"
   />
 
 
